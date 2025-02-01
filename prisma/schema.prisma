@@ -63,6 +63,8 @@ model Category {
   type        TransactionType
   user        User            @relation(fields: [userId], references: [id], onDelete: Cascade)
   Transaction Transaction[]
+
+  @@map("category")
 }
 
 model Transaction {
